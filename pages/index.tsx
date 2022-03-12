@@ -1,21 +1,18 @@
 import Link from 'next/link';
-import styled from 'styled-components';
-import Layout from '../components/Layout';
-
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`;
+import Layout from './layout/base';
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <Title>Hello Next.js 👋</Title>
+  <>
     <p>
       <Link href="/about">
         <a>About</a>
       </Link>
     </p>
-  </Layout>
+  </>
 );
+
+IndexPage.getLayout = function getLayout(page) {
+  return <Layout title="Home | Next.js + TypeScript Example">{page}</Layout>;
+};
 
 export default IndexPage;

@@ -11,7 +11,6 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
   ],
-  plugins: [],
   rules: {
     "no-shadow": "off",
     // TODO: process.env.NODE_ENV === "production" ? "error" : "off",

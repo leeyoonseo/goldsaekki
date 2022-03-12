@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+import { AppProps } from 'next/app';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { reset } from 'styled-reset';
 
@@ -17,8 +19,10 @@ const theme = {
   },
 };
 
-export default function App({ Component, pageProps }) {
-  return (
+export default function App({ Component, pageProps }: AppProps) {
+  const getLayout = Component.getLayout || ((page: ReactNode) => page);
+
+  return getLayout(
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
