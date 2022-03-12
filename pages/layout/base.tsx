@@ -17,6 +17,7 @@ type Props = {
   title?: string;
 };
 
+// TODO: Layout 작업 https://nextjs.org/docs/basic-features/layouts
 const base = ({ children, title = 'This is the default title' }: Props) => {
   return (
     <>

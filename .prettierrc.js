@@ -8,9 +8,9 @@ module.exports = {
       files: [
         "*.scss",
         "*.json",
-        "*.d.ts",
+        // "*.d.ts",
         "*.js",
-        "*.ts",
+        // "*.ts",
         "*.tsx",
       ],
       options: {

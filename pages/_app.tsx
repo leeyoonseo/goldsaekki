@@ -1,11 +1,11 @@
 import { ReactNode } from 'react';
-import { AppProps } from 'next/app';
+import type { GetLayout, AppLayoutProps } from 'next';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { reset } from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
-  
+
   body {
     margin: 0;
     padding: 0;
@@ -18,16 +18,20 @@ const theme = {
     primary: '#0070f3',
   },
 };
+const defaultGetLayout: GetLayout = (page: ReactNode): ReactNode => page;
 
-export default function App({ Component, pageProps }: AppProps) {
-  const getLayout = Component.getLayout || ((page: ReactNode) => page);
+const App = ({ Component, pageProps }: AppLayoutProps): JSX.Element => {
+  // const getLayout: GetLayout = (page: ReactNode): ReactNode => page;
+  const getLayout = Component.getLayout ?? defaultGetLayout;
 
-  return getLayout(
+  return (
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        {getLayout(<Component {...pageProps} />)}
       </ThemeProvider>
     </>
   );
-}
+};
+
+export default App;
