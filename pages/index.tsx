@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import Link from 'next/link';
 import Layout from './layout/base';
 
@@ -11,8 +12,9 @@ const IndexPage = () => (
   </>
 );
 
-IndexPage.getLayout = function getLayout(page) {
-  return <Layout title="Home | Next.js + TypeScript Example">{page}</Layout>;
+IndexPage.getLayout = function getLayout(page: ReactNode) {
+  const title = 'GoldSaekki | 메인';
+  return <Layout title={title}>{page}</Layout>;
 };
 
 export default IndexPage;
