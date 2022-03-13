@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Link from "next/link";
 import Layout from "./layout/base";
+import Head from "next/head";
 
 const AboutPage = () => (
   <>
@@ -15,8 +16,13 @@ const AboutPage = () => (
 );
 
 AboutPage.getLayout = function getLayout(page: ReactNode) {
-  const title = "OKAYOON | About";
-  return <Layout title={title}>{page}</Layout>;
+  <>
+    <Head>
+      <title>OKAYOON | ABOUT</title>
+    </Head>
+
+    <Layout>{page}</Layout>
+  </>;
 };
 
 export default AboutPage;
