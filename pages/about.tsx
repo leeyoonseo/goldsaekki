@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
-import Link from 'next/link';
-import Layout from './layout/base';
+import { ReactNode } from "react";
+import Link from "next/link";
+import Layout from "./layout/base";
 
 const AboutPage = () => (
   <>
@@ -15,7 +15,7 @@ const AboutPage = () => (
 );
 
 AboutPage.getLayout = function getLayout(page: ReactNode) {
-  const title = 'GoldSaekki | About';
+  const title = "OKAYOON | About";
   return <Layout title={title}>{page}</Layout>;
 };
 
