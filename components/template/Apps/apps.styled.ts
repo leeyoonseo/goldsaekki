@@ -18,8 +18,10 @@ export const Apps = styled.ul`
     }
   }
 
-  .app-button {
+  .app-link {
+    display: inline-block;
     width: 100%;
+    text-align: center;
     cursor: pointer;
     transition: all 0.5s;
 
