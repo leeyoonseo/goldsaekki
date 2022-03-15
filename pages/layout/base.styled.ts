@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const Wrap = styled.div`
-  background: ${(props) => props.theme.light.primary};
-  height: 100vh;
   display: flex;
+  height: 100vh;
+  background: ${(props) => props.theme.light.primary};
   flex-direction: column;
+  overflow-x: hidden;
 `;
 
 export const Container = styled.div`
