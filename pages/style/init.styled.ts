@@ -5,9 +5,25 @@ export const InitWrap = styled.div`
   padding: 24px 2%;
   width: 100%;
   height: 100%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+
+  .init__link-portpolio {
+    margin-bottom: 8px;
+    display: block;
+    width: 100%;
+    text-align: right;
+
+    a {
+      font-size: 13px;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
 
   .init__title {
     margin-bottom: 20px;

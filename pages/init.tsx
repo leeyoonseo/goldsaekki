@@ -1,8 +1,9 @@
 import { ReactNode, useState } from "react";
-import Layout from "./layout/base";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/Link";
 import * as S from "./style/init.styled";
+import Layout from "./layout/base";
 import Input from "@/components/common/Input/input";
 
 const Init = () => {
@@ -35,6 +36,12 @@ const Init = () => {
 
   return (
     <S.InitWrap>
+      {/* TODO: 포트폴리오 작업 후 링크 추가 */}
+      <div className="init__link-portpolio">
+        <Link href="#">
+          <a> &gt; Portpolio Site</a>
+        </Link>
+      </div>
       <div className="init__inner">
         <h2 className="init__title">Welcome!!</h2>
 
@@ -54,6 +61,11 @@ const Init = () => {
             <S.Avatars>{renderAvatars()}</S.Avatars>
           </li>
         </ul>
+
+        <div>
+          <button>취소</button>
+          <button>등록</button>
+        </div>
       </div>
     </S.InitWrap>
   );
