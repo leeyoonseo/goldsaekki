@@ -31,10 +31,6 @@ module.exports = {
             char: "}",
             alternatives: ["&#125;"],
           },
-          {
-            char: "&",
-            alternatives: ["&amp;"],
-          },
         ],
       },
     ],
