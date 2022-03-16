@@ -31,7 +31,7 @@ const light: Theme = {
   secondary: '#1d4b45',
   secondaryDark: '#082420',
   tertiary: '#e7e8fe',
-  gray: '##f7f7f7',
+  gray: '#f7f7f7',
   grayDark: '#e1dfdf',
   dangerBgColor: '#ffe4e4',
   dangerBgColorDark: '#ffc5c5',

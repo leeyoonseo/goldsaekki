@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import withProps from '@/utils/withProps';
 import { Props } from './input';
 
 export const Wrap = styled.div`
@@ -16,7 +17,7 @@ export const Wrap = styled.div`
   }
 `;
 
-export const Input = styled.input`
+// export const Input = withProps<Props>()(styled.input)`
 export const Input = styled.input<Props>`
   padding: 0 16px;
   width: 100%;
@@ -52,5 +53,4 @@ export const Input = styled.input<Props>`
       color: #ccc;
     }
   }
-`;
 ` as React.FunctionComponent<Props>;

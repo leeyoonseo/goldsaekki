@@ -27,7 +27,8 @@ export const InitWrap = styled.div`
 
   .init__title {
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: 800;
     text-align: center;
   }
 
@@ -48,6 +49,16 @@ export const InitWrap = styled.div`
     .init__input-title {
       display: block;
       margin-bottom: 12px;
+    }
+
+    .init__buttons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+
+      button + button {
+        margin-left: 8px;
+      }
     }
   }
 `;

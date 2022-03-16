@@ -1,17 +1,26 @@
-import { ReactNode, useState } from "react";
+import React, { ReactNode, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/Link";
 import * as S from "./style/init.styled";
 import Layout from "./layout/base";
 import Input from "@/components/common/Input/input";
+import Button from "@/components/common/Button/button";
 
 const Init = () => {
   const [nickname, setNickname] = useState("");
 
-  const handleInput = ({ target }: { target: HTMLInputElement }) => {
-    console.log("handleInput", target.value);
-    setNickname(target.value);
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log("handleInput", e.target.value);
+    setNickname(e.target.value);
+  };
+
+  const handleCancel = () => {
+    console.log("handleCancel");
+  };
+
+  const handleConfirm = () => {
+    console.log("handleConfirm");
   };
 
   const renderAvatars = () => {
@@ -52,7 +61,7 @@ const Init = () => {
               placeholder="12자까지 입력가능합니다."
               value={nickname}
               maxLength={12}
-              handleInput={handleInput}
+              onInput={handleInput}
             />
           </li>
           <li className="init__input-item">
@@ -62,9 +71,13 @@ const Init = () => {
           </li>
         </ul>
 
-        <div>
-          <button>취소</button>
-          <button>등록</button>
+        <div className="init__buttons">
+          <Button className="small" onClick={handleCancel}>
+            취소
+          </Button>
+          <Button className="primary small" onClick={handleConfirm}>
+            등록
+          </Button>
         </div>
       </div>
     </S.InitWrap>
