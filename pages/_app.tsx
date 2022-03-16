@@ -34,10 +34,6 @@ const App = ({ Component, pageProps }: AppLayoutProps): JSX.Element => {
         />
         <meta property="og:title" content="Okayoon" />
         <title>OKAYOON</title>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <GlobalStyle />
 
