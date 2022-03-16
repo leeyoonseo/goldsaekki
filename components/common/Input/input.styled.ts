@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Props } from './input';
 
 export const Wrap = styled.div`
   position: relative;
@@ -16,6 +17,7 @@ export const Wrap = styled.div`
 `;
 
 export const Input = styled.input`
+export const Input = styled.input<Props>`
   padding: 0 16px;
   width: 100%;
   height: 40px;
@@ -51,3 +53,4 @@ export const Input = styled.input`
     }
   }
 `;
+` as React.FunctionComponent<Props>;
